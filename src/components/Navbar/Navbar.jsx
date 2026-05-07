@@ -4,17 +4,19 @@ import Netflix_logo from '../../assets/netflix_logo.svg';
 
 export default function Navbar(){
     return (
-            <div className='lg:text-sm xl:text-base hidden lg:flex fixed z-10 flex bg-black justify-between px-20 items-center text-white w-full top-0'>
-                <div className='flex gap-6 text-white items-center'>
+            <div className='lg:text-sm xl:text-base md:flex fixed z-10 flex bg-black justify-between lg:px-20 items-center text-white w-full top-0'>
+                <div className='flex lg:gap-6 text-white items-center'>
                     <img className="h-24" src={Netflix_logo} alt="Netflix Logo" />
-                    <Link to={"/home"}>Home</Link>
-                    <Link>Shows</Link>
-                    <Link>Movies</Link>
-                    <Link>New & Popular</Link>
-                    <Link to={'/watchlist'}>My List</Link>
-                    <Link>Browse by Language</Link>
+                    <div  className='hidden md:flex md:gap-6 text-white items-center'>
+                        <Link to={"/home"}>Home</Link>
+                        <Link>Shows</Link>
+                        <Link>Movies</Link>
+                        <Link>New & Popular</Link>
+                        <Link to={'/watchlist'}>My List</Link>
+                        <Link>Browse by Language</Link>
+                    </div>
                 </div>
-                <div className='flex gap-6 '>
+                <div className='flex lg:gap-6 '>
                     {/* search icon */}
                     <div className='flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
